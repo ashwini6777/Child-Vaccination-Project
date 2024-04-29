@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Admin page </title>
+    <link rel="stylesheet" href="adminmessage.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script>
+     function addchild() {
+  var x = document.getElementById("add"); 
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+     function updatechild() {
+        var x = document.getElementById("update"); 
+        if (x.style.display === "none") {
+           x.style.display = "block";
+        } else {
+           x.style.display = "none";
+    }
+}
+     function deletechild() {
+  var x = document.getElementById("delete"); 
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+}
+    function sendmsg() {
+      alert("send successfully ");
+    }
+</script>
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class="fa fa-circle-a"></i>
+      <span class="logo_name">AaroghyShishu</span>
+    </div>
+      <ul class="nav-links">
+        <li>
+          <a href="n1.html">
+            <i class='bx bx-grid-alt' ></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+      
+        <li>
+          <a href="nurseUser.html" class="active">
+            <i class='bx bx-user' ></i>
+            <span class="links_name">Team</span>
+          </a>
+        </li>
+        <li>
+          <a href="nurseMessage.html" >
+            <i class='bx bx-message' ></i>
+            <span class="links_name">Messages</span>
+          </a>
+        </li>
+       
+       
+     <li>
+          <a href="login.html">
+            <i class='bx bx-log-out'></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+      </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="dashboard">Team</span>
+      </div>
+      
+      <div class="profile-details">
+        <img src="images/profile.jpg" alt="">
+        <span class="admin_name">Shweta</span>
+        
+      </div>
+    </nav>
+    
+    <div class="home-content">
+       <div class="choosebtns">
+        <button class="choosebtn" type="submit" name="Add" onclick="addchild()">Add</button>
+         <button class="choosebtn" type="submit" name="Update" onclick="updatechild()">Update</button>
+          <button class="choosebtn" type="submit" name="Add" onclick="deletechild()">Delete</button>
+    </div>
+    
+    <div class="form-content" id="add">
+          <div class="login-form">
+            <div class="title">Upload New Child Details</div>
+          <form action="#">
+            <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-child">
+                    
+                </i> &nbsp;&nbsp;<input type="text" placeholder="Enter Child name" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-syringe">
+                    
+                </i> &nbsp;&nbsp;<input type="text" placeholder="Enter Vaccination " required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-balance-scale">
+                    
+                </i> &nbsp; <input type="text" placeholder="Enter Child Weight" required>
+              </div>
+               <div class="input-box">
+                <i class="fas fa-envelope">
+
+                    
+                </i> &nbsp;&nbsp;<input type="text" placeholder="Enter phone no" required>
+              </div>
+             <div class="send-btns">
+                  <input class="send-btn" type="button" value="Add" name="add" onclick="addchild()">
+              </div>
+              </div>
+              </div>
+             </div> 
+       
+       
+       
+       
+             <div class="form-content" id="update">
+          <div class="login-form">
+            <div class="title">Update Child Details</div>
+          <form action="#">
+            <div class="input-boxes">
+                 <div class="input-box">
+                <i class="fas fa-id-badge">
+                    
+                </i> &nbsp;&nbsp;<input type="text" placeholder="Enter Child Id" required>
+                </div>
+                
+                
+               
+              <div class="input-box">
+                <i class="fas fa-check-square">                 
+            
+          </i> &nbsp;&nbsp;<select name="drinks" required style="width:1000px; height :50px;color:gray;">
+        
+      <option value="" disabled selected hidden>Select For Update</option>
+      <option value="height">Height</option>
+      <option value="weight">Weight</option>
+      <option value="name">Name</option>
+    </select>
+ 
+              </div>     
+                    
+                                                                   
+              <div class="input-box">
+                <i class="fas fa-edit">
+              </i> &nbsp; <input type="text" placeholder="Enter Value" required>
+              </div>
+             <div class="send-btns">
+                  <input class="send-btn" type="button" value="Update" name="update" onclick="updatechild()">
+              </div>
+           </div>
+         </div>
+    </div> 
+      
+        
+            
+     
+      <div class="form-content" id="delete">
+          <div class="login-form">
+            <div class="title">Delete Child Details</div>
+          <form action="#">
+            <div class="input-boxes">
+                 <div class="input-box">
+                <i class="fas fa-child">
+                    
+                </i> &nbsp; <input type="text" placeholder="Enter Child Id" required>
+                </div>
+              
+             <div class="send-btns">
+                  <input class="send-btn" type="button" value="Delete" name="delete" onclick="deletechild()">
+              </div>
+              </div>
+              </div>
+              </div>
+              
+              
+   </div>          
+   
+  </section>
+
+  <script>
+   let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".sidebarBtn");
+sidebarBtn.onclick = function() {
+  sidebar.classList.toggle("active");
+  if(sidebar.classList.contains("active")){
+  sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+}else
+  sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+}
+ </script>
+
+</body>
+</html>
